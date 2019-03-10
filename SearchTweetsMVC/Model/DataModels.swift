@@ -11,11 +11,11 @@ import Foundation
 import UIKit
 
 
-public struct SearchResult: Decodable {
+public struct SearchResult: Codable {
     let statuses: [Tweets]?
 }
 
-public struct Tweets: Decodable {
+public struct Tweets: Codable {
     let text:String?
     let created_at:String?
     let favorite_count:Int?
@@ -26,18 +26,18 @@ public struct Tweets: Decodable {
     let entities: Entities?
 }
 
-public struct UserDetail: Decodable {
+public struct UserDetail: Codable {
     let name:String?
     let screen_name:String?
     let id_str:String?
     let profile_image_url:String?
 }
 
-public struct Entities: Decodable {
+public struct Entities: Codable {
     let media: [Media]?
 }
 
-public struct Media: Decodable{
+public struct Media: Codable{
     let media_url_https:String?
 }
 
